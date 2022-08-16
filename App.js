@@ -14,7 +14,7 @@ function App() {
     <NavigationContainer>
       <StatusBar style="light" />
       <Stack.Navigator
-        initialRouteName="MovieDetail"
+        initialRouteName="MovieList"
         screenOptions={{
           headerStyle: { backgroundColor: "#1A1717" },
           headerTintColor: "white",
