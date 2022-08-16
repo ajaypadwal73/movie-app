@@ -16,7 +16,7 @@ function App() {
       <Stack.Navigator
         initialRouteName="MovieDetail"
         screenOptions={{
-          headerStyle: { backgroundColor: "#1a0d00" },
+          headerStyle: { backgroundColor: "#1A1717" },
           headerTintColor: "white",
           contentStyle: {
             backgroundColor: "#f2f2f2",
