@@ -14,22 +14,23 @@ function ContentContainer({
         />
       </View>
 
-      <View style={styles.movieDurationRatingsContainer}>
-        <View>
+      <View style={styles.movieDuratingRatingFavoritesContainer}>
+        <View style={styles.movieDurationContainer}>
           <View>
-            <Text style={styles.movie}>{movie}</Text>
+            <Text style={styles.movie}>Movie Name</Text>
           </View>
-
           <View>
-            <Text style={styles.duration}>{duration} mins</Text>
+            <Text style={styles.duration}>120 mins</Text>
           </View>
+        </View>
 
-          <View style={styles.ratingsContainer}>
-            <Text style={styles.ratings}>{ratings}/10</Text>
-          </View>
-          <View style={styles.buttonContainer}>
+        <View style={styles.ratingsContainer}>
+          <Text style={styles.ratingsText}>9/10</Text>
+        </View>
+        <View style={styles.addToFavContainer}>
+          <View style={styles.addToFavButton}>
             <Pressable title="Add to favorites">
-              <Text style={styles.buttonText}>Add to favorites</Text>
+              <Text style={styles.addToFavText}>Add to favorites</Text>
             </Pressable>
           </View>
         </View>
@@ -42,21 +43,24 @@ export default ContentContainer;
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 0.5,
+    flex: 1.7,
     margin: 24,
     flexDirection: "row",
   },
   imageContainer: {
     width: "35%",
-    height: 200,
+    height: 205,
   },
   image: {
     width: "100%",
     height: "100%",
   },
-  movieDurationRatingsContainer: {
+  movieDuratingRatingFavoritesContainer: {
     flex: 1,
     marginLeft: 18,
+  },
+  movieDurationContainer: {
+    flex: 1,
   },
   movie: {
     fontSize: 16,
@@ -66,20 +70,24 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   ratingsContainer: {
-    marginTop: 60,
+    flex: 1,
   },
-  ratings: {
+  ratingsText: {
     fontSize: 13,
     fontWeight: "bold",
   },
-  buttonContainer: {
-    marginTop: 28,
-    height: 55,
+  addToFavContainer: {
+    flex: 1,
+    flexDirection: "column-reverse",
+  },
+  addToFavButton: {
     backgroundColor: "#77716f",
+    width: "100%",
+    height: 50,
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonText: {
+  addToFavText: {
     color: "white",
   },
 });
