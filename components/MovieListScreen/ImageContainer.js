@@ -4,17 +4,17 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 
 
 
-function ImageContainer() {
+function ImageContainer({movieDetails}) {
   const navigation = useNavigation();
 
   const imageOnPressHandler = () => {
-    navigation.navigate('MovieDetail')
+    navigation.navigate('MovieDetail', movieDetails)
   }
   return (
     <View style={styles.imageContainer}>
       <Pressable style={styles.button} onPress={imageOnPressHandler}>
         <Image
-          source={require("../../assets/images/1.jpg")}
+          source={{uri: movieDetails.photoUrl}}
           style={styles.image}
         />
       </Pressable>

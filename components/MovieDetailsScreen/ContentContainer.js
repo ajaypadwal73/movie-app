@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 function ContentContainer({
+  photoUrl,
   movie = "Movie Name",
   duration = 120,
   ratings = 9,
@@ -9,7 +10,7 @@ function ContentContainer({
     <View style={styles.contentContainer}>
       <View style={styles.imageContainer}>
         <Image
-          source={require("../../assets/images/1.jpg")}
+          source={{uri: photoUrl}}
           style={styles.image}
         />
       </View>
@@ -17,7 +18,7 @@ function ContentContainer({
       <View style={styles.movieDuratingRatingFavoritesContainer}>
         <View style={styles.movieDurationContainer}>
           <View>
-            <Text style={styles.movie}>Movie Name</Text>
+            <Text style={styles.movie}>{movie}</Text>
           </View>
           <View>
             <Text style={styles.duration}>120 mins</Text>
@@ -25,7 +26,7 @@ function ContentContainer({
         </View>
 
         <View style={styles.ratingsContainer}>
-          <Text style={styles.ratingsText}>9/10</Text>
+          <Text style={styles.ratingsText}>{ratings}/10</Text>
         </View>
         <View style={styles.addToFavContainer}>
           <View style={styles.addToFavButton}>

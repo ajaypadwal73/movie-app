@@ -4,15 +4,18 @@ import Title from "../components/MovieDetailsScreen/Title";
 import ContentContainer from "../components/MovieDetailsScreen/ContentContainer";
 import StoryOulineContainer from "../components/MovieDetailsScreen/StoryOulineContainer";
 import TrailerSection from "../components/MovieDetailsScreen/TrailerSection";
+import { useRoute } from "@react-navigation/native";
 
 function MovieDetailScreen() {
+  const route = useRoute();
+  const { title, photoUrl, rating, storyOutline, trailerUrl } = route.params;
   return (
     <View style={styles.rootContainer}>
-      <Title />
+      <Title title={title}/>
 
-      <ContentContainer />
+      <ContentContainer photoUrl={photoUrl} movie={title} ratings={rating}  />
 
-      <StoryOulineContainer />
+      <StoryOulineContainer storyOutline={storyOutline}/>
 
       <TrailerSection />
     </View>
