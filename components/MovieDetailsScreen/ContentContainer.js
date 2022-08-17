@@ -21,7 +21,7 @@ function ContentContainer({
             <Text style={styles.movie}>{movie}</Text>
           </View>
           <View>
-            <Text style={styles.duration}>120 mins</Text>
+            <Text style={styles.duration}>{duration} mins</Text>
           </View>
         </View>
 

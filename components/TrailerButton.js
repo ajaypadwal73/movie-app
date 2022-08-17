@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, Button, Pressable } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-function TrailerButton() {
+function TrailerButton({trailerNumber}) {
   return (
     <View style={styles.trailersButtonContainer}>
       <View style={styles.trailerButton}>
@@ -12,7 +12,7 @@ function TrailerButton() {
               <Ionicons name="play-circle-outline" size={32} />
             </View>
             <View>
-              <Text>Trailer 1</Text>
+              <Text>Trailer {trailerNumber+1}</Text>
             </View>
           </View>
         </Pressable>

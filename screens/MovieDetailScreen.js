@@ -8,16 +8,16 @@ import { useRoute } from "@react-navigation/native";
 
 function MovieDetailScreen() {
   const route = useRoute();
-  const { title, photoUrl, rating, storyOutline, trailerUrl } = route.params;
+  const { title, photoUrl, duration, rating, storyOutline, trailers } = route.params;
   return (
     <View style={styles.rootContainer}>
       <Title title={title}/>
 
-      <ContentContainer photoUrl={photoUrl} movie={title} ratings={rating}  />
+      <ContentContainer photoUrl={photoUrl} movie={title} ratings={rating} duration={duration} />
 
       <StoryOulineContainer storyOutline={storyOutline}/>
 
-      <TrailerSection />
+      <TrailerSection trailers={trailers}/>
     </View>
   );
 }

@@ -3,16 +3,16 @@ import { View, Text, StyleSheet, Image, Button, Pressable } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import TrailerButton from "../TrailerButton";
 
-function TrailerSection() {
+function TrailerSection({trailers}) {
   return (
     <View style={styles.trailerContentContainer}>
       <View style={styles.trailerTitleContainer}>
         <Text style={styles.trailerTitleText}>Trailers</Text>
       </View>
       <View style={styles.trailersContainer}>
-        <TrailerButton />
-        <TrailerButton />
-        <TrailerButton />
+        {trailers.map((trailer, index) => (
+          <TrailerButton key={trailer} trailerNumber={index}/>
+        ))}
       </View>
     </View>
   );
