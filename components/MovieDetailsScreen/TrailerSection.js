@@ -7,7 +7,7 @@ function TrailerSection({trailers}) {
   return (
     <View style={styles.trailerContentContainer}>
       <View style={styles.trailerTitleContainer}>
-        <Text style={styles.trailerTitleText}>Trailers</Text>
+        <Text style={styles.trailerTitleText}>TRAILERS</Text>
       </View>
       <View style={styles.trailersContainer}>
         {trailers.map((trailer, index) => (
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     borderBottomColor: "#Ada8a8",
   },
   trailerTitleText: {
-    fontSize: 15,
+    fontSize: 16,
+    color: '#70716F'
   },
   trailersContainer:{
     flex: 1

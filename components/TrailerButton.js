@@ -12,7 +12,7 @@ function TrailerButton({trailerNumber}) {
               <Ionicons name="play-circle-outline" size={32} />
             </View>
             <View>
-              <Text>Trailer {trailerNumber+1}</Text>
+              <Text>Play trailer {trailerNumber+1}</Text>
             </View>
           </View>
         </Pressable>
