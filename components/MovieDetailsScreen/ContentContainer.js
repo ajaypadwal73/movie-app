@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { COLOR } from "../../constants/colors";
 function ContentContainer({
   photoUrl,
   movie = "Movie Name",
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: "column-reverse",
   },
   addToFavButton: {
-    backgroundColor: "#77716f",
+    backgroundColor: COLOR.buttonBackground,
     width: "100%",
     height: 50,
     justifyContent: "center",

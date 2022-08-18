@@ -44,6 +44,7 @@ function MovieListScreen() {
         renderItem={imageFlatListRenderer}
         numColumns={2}
         onEndReached={makeGetMovieListApiCall}
+        onEndReachedThreshold={0.5}
       />
     </SafeAreaView>
   );

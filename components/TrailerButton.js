@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Button, Pressable } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { COLOR } from "../constants/colors";
 
 function TrailerButton({trailerNumber}) {
   return (
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     height: 20
   },
   trailerButton: {
-    backgroundColor: "#E8e4e4",
+    backgroundColor: COLOR.trailerButtonBackground,
     marginVertical: 15,
     height: 45,
   },

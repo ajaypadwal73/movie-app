@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, Button, Pressable } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import TrailerButton from "../TrailerButton";
+import { COLOR } from "../../constants/colors";
 
 function TrailerSection({trailers}) {
   return (
@@ -28,11 +29,11 @@ const styles = StyleSheet.create({
   trailerTitleContainer: {
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#Ada8a8",
+    borderBottomColor: COLOR.trailerTitleBorder,
   },
   trailerTitleText: {
     fontSize: 16,
-    color: '#70716F'
+    color: COLOR.trailerTitleText
   },
   trailersContainer:{
     flex: 1

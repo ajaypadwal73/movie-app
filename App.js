@@ -6,6 +6,7 @@ import MovieDetailScreen from "./screens/MovieDetailScreen";
 import MovieListScreen from "./screens/MovieListScreen";
 import { StatusBar } from "expo-status-bar";
 import Entypo from "@expo/vector-icons/Entypo";
+import { COLOR } from "./constants/colors";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,11 +17,8 @@ function App() {
       <Stack.Navigator
         initialRouteName="MovieList"
         screenOptions={{
-          headerStyle: { backgroundColor: "#1A1717" },
+          headerStyle: { backgroundColor: COLOR.headerBlack },
           headerTintColor: "white",
-          contentStyle: {
-            backgroundColor: "#f2f2f2",
-          },
           headerRight: () => (
             <Entypo name="dots-three-vertical" size={20} color='white' />
           ),
